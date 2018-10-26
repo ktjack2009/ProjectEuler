@@ -18,3 +18,16 @@ def factoring(num):
                 num /= i
         i += 1
     return arr
+
+
+def prime_num(num):
+    if num in [0, 1]:
+        return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    for i in range(3, int(num ** 0.5) + 1, 2):
+        if num % i == 0:
+            return False
+    return True
